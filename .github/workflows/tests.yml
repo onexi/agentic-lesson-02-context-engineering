@@ -13,3 +13,4 @@ jobs:
         with:
           python-version: "3.12"
       - run: python -m tests.test_order_service
+      - run: python -m tests.test_test_support

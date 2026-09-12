@@ -44,7 +44,7 @@ python3 -m acceptance_tests.test_discount_acceptance
 
 The first command checks existing behavior: **3 tests pass in the starter**. The second checks the assigned feature: **12 tests initially fail because the feature is unfinished**. A completed feature reports `3/3 tests passed` and `12/12 tests passed`, each followed by `OK`. Do not delete, skip, or weaken checks to obtain a pass.
 
-The automatic GitHub workflow checks existing behavior only so the unfinished template stays usable. **A green GitHub check alone does not mean the assignment is complete.** Include output from both commands in your submission.
+The automatic GitHub workflow checks existing behavior and the test runner so the unfinished template stays usable. **A green GitHub check alone does not mean the assignment is complete.** Include output from both commands in your submission.
 
 ## Files you will encounter
 
@@ -59,10 +59,12 @@ The automatic GitHub workflow checks existing behavior only so the unfinished te
 | `docs/codex-context.md` | The project briefing you create for attempt B |
 | `docs/comparison.md` | The completed comparison you submit |
 
-There are no third-party dependencies, installation commands, web server, or configured lint tool. Python 3.10 or later and Git are sufficient for local work. Tests are the way to run and verify this project. Each test is an ordinary function. An `assert` checks that a statement is true; the test runner prints `PASS` or `FAIL` and exits with an error if a test fails. Use the exact commands above; do not add Python’s `-O` option, which disables assertions.
+There are no third-party dependencies, installation commands, web server, or configured lint tool. Python 3.10 or later and Git are sufficient for local work. Tests are the way to run and verify this project. Each test is an ordinary function. An `assert` checks that a statement is true; the test runner prints `PASS` or `FAIL` and exits with an error if a test fails. Use the exact commands above; do not add Python’s `-O` option, which disables assertions. The runner rejects optimized Python and empty test lists.
 
 ## Instructor note
 
 This repository uses one 90-minute sequence, two implemented attempts, and one briefing filename: `docs/codex-context.md`. Use these repository instructions if the [original lesson brief](https://docs.google.com/document/d/1U0RULD0rD95nlXe9mARu8VRwdfSD7N0EaEUJSo_duO4/edit) differs. The original brief's `CONTEXT.md` refers to this same deliverable; students should not create two briefings. Setup should be completed before the timed workshop. Lesson 02 is the course identifier even when this is a student's first coding exercise.
 
 [Fall 2026 course schedule](https://docs.google.com/spreadsheets/d/1JMbgBQlmLbLhXaRGhf5DeWaE31Wu0ROAByPyzyIxn9E/edit?usp=sharing)
+
+Maintainer check: `python3 -m tests.test_test_support` verifies the test runner itself (8 checks). GitHub also runs these checks. They are separate from the 15 student feature/compatibility tests.
