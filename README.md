@@ -2,7 +2,7 @@
 
 MIT Agentic Computing Apprenticeship • Lesson 02 • 90-minute workshop, after setup
 
-**Your goal:** help an AI make one small, correct change, then use evidence to compare what happened with minimal instructions and with a carefully written project briefing. No previous coding experience is assumed. Ask for explanations whenever you encounter unfamiliar code or terminology.
+**Your goal:** Use OpenAI Codex to help an AI make one small, correct change, then use evidence to compare what happened with minimal instructions and with a carefully written project briefing. No previous coding experience is assumed. Ask for explanations whenever you encounter unfamiliar code or terminology.
 
 This project is a small Python calculation, not a website. It calculates an order total in cents. You will complete `apply_tier_discount` so that standard customers pay full price and gold customers receive a 10% discount. For example, a gold customer's $100 order should cost $90. You will not build an entire application.
 
