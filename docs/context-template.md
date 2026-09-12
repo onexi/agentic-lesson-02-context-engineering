@@ -6,7 +6,7 @@ Create `docs/codex-context.md` on attempt B using these headings. Replace prompt
 What does this program calculate? Who benefits from the calculation? Distinguish a stated fact from an assumption about a larger application.
 
 ## File map and boundaries
-Where are the data structure, calculation, pricing policy, tests, and AI instructions? Cite exact file paths and relevant function names. What must remain unchanged?
+Where are the calculation functions, pricing policy, tests, and AI instructions? Cite exact file paths and relevant function names. What must remain unchanged?
 
 ## Environment and verified commands
 Record Python version and actual commands/results for both suites. Explain the expected initial acceptance failure. State whether dependencies, an installation step, a server, and lint commands exist; do not invent them.

@@ -2,9 +2,9 @@
 
 ## The task in plain language
 
-Complete `apply_tier_discount(order)` in `starter/order_service.py`. It receives an order containing a price in cents and a customer tier, then returns the amount that customer should pay as an integer number of cents. An invalid order must produce an explanatory error.
+Complete `apply_tier_discount(subtotal_cents, customer_tier="standard")` in `starter/order_service.py`. It receives a price in cents and an optional customer tier as two simple values, then returns the amount that customer should pay as an integer number of cents. An invalid order must produce an explanatory error.
 
-Use [domain-rules.md](domain-rules.md) as the pricing authority. Keep `Order`, `total_cents`, and the existing function signatures unchanged. Do not add dependencies or build extra features.
+Use [domain-rules.md](domain-rules.md) as the pricing authority. Keep the two function names and their parameters unchanged. Use ordinary functions. Do not add classes, dependencies, or extra features.
 
 ## Acceptance examples
 
@@ -25,7 +25,7 @@ These examples define observable success. A `ValueError` means the function reje
 | 0 | empty string | `ValueError`; message identifies unknown/unsupported tier |
 | 10000000000000015 | gold | 9000000000000014, with no loss of precision |
 
-Check these with `python3 -m unittest discover -s acceptance_tests -v`. Existing behavior must also pass `python3 -m unittest discover -s tests -v`. Each command must finish with `OK` and no skips. Review the code as well: passing examples alone cannot prove that integer arithmetic is used throughout or that the implementation is sensible for other valid inputs.
+Check these with `python3 -m acceptance_tests.test_discount_acceptance`. Existing behavior must also pass `python3 -m tests.test_order_service`. Each command must finish with `OK` and no skips. Review the code as well: passing examples alone cannot prove that integer arithmetic is used throughout or that the implementation is sensible for other valid inputs.
 
 ## Learning deliverables
 

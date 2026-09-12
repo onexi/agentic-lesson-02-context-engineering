@@ -19,8 +19,8 @@ What changed, and why? Link the verified briefing at `docs/codex-context.md` and
 
 Paste the commands and observed output, or link their complete output in the comparison:
 
-- Existing behavior: `python3 -m unittest discover -s tests -v`
-- Feature acceptance: `python3 -m unittest discover -s acceptance_tests -v`
+- Existing behavior: `python3 -m tests.test_order_service`
+- Feature acceptance: `python3 -m acceptance_tests.test_discount_acceptance`
 
 ## Completion checklist
 

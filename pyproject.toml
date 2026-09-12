@@ -3,6 +3,3 @@ name = "agentic-lesson-02-context-engineering"
 version = "0.1.0"
 requires-python = ">=3.10"
 description = "Starter repository for Context Engineering for Codex"
-
-[tool.unittest]
-start-directory = "tests"

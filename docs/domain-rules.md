@@ -9,5 +9,5 @@
 - Negative subtotals must raise `ValueError` with a message explaining that the subtotal must be non-negative.
 - Only the exact, case-sensitive strings `standard` and `gold` are supported. Any other tier, including `Gold`, the empty string, or `silver`, must raise `ValueError` with a message identifying the tier as unknown or unsupported. Do not silently charge full price for an unknown tier.
 - For an input that is both negative and an unknown tier, either applicable validation error is acceptable.
-- Keep `Order` and both function signatures unchanged. `total_cents` remains the existing undiscounted subtotal validator; the new policy belongs in `apply_tier_discount`.
+- Keep `total_cents(subtotal_cents)` and `apply_tier_discount(subtotal_cents, customer_tier="standard")` unchanged as interfaces. Use ordinary functions, not classes. `total_cents` remains the existing undiscounted subtotal validator; the new policy belongs in `apply_tier_discount`.
 - Handling non-integer subtotals, currencies, tax, shipping, new tiers, and a user interface is outside this lesson's scope.

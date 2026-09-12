@@ -23,7 +23,7 @@
 2. On **your** new repository, select **Code → HTTPS** and copy its URL. In a terminal, type `git clone ` followed by that URL. Then run `cd context-engineering-lab` (or your chosen name). You can instead use your editor's clone command. Do not clone the instructor's repository for your student submission.
 3. Open that local folder in the class's configured coding environment. Confirm that your AI assistant can inspect its files. If the assistant or Python/Git is not set up, ask the instructor or TA before starting the timer.
 4. Run `git --version` and `python3 --version`. Python must be 3.10 or later. On Windows, try `py --version`; on systems where Python 3 is named `python`, use `python --version`. Substitute that working command everywhere this guide says `python3`. No package installation is needed.
-5. Run both test commands from the README. Expect 3 existing-behavior tests to pass and 12 acceptance tests to report errors from the unimplemented feature. That confirms the starter, not a completed assignment. A missing interpreter or import error is a setup problem; a `NotImplementedError` from `apply_tier_discount` is the expected starting state.
+5. Run both test commands from the README. Expect 3 existing-behavior tests to pass and 12 acceptance tests to report FAIL for the unimplemented feature. That confirms the starter, not a completed assignment. A missing interpreter or import error is a setup problem; a `NotImplementedError` from `apply_tier_discount` is the expected starting state.
 
 You may ask the assistant to help with commands, but read what each command will do. Never paste a destructive reset/clean command to switch attempts. The branch procedure below keeps both attempts.
 
