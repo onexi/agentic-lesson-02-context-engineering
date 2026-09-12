@@ -1,34 +1,56 @@
-# Lesson 02: Context Engineering for Codex
+# Context Engineering: Give AI the Information It Needs
 
-Starter repository for the MIT Agentic Computing Apprenticeship.
+MIT Agentic Computing Apprenticeship • Lesson 02 • 90-minute workshop, after setup
 
-## Challenge
+**Your goal:** help an AI make one small, correct change, then use evidence to compare what happened with minimal instructions and with a carefully written project briefing. No previous coding experience is assumed. Ask for explanations whenever you encounter unfamiliar code or terminology.
 
-Build a verified context packet and use it to make a convention-aligned change.
+This project is a small Python calculation, not a website. It calculates an order total in cents. You will complete `apply_tier_discount` so that standard customers pay full price and gold customers receive a 10% discount. For example, a gold customer's $100 order should cost $90. You will not build an entire application.
 
-- [Open the lesson challenge brief](https://docs.google.com/document/d/1U0RULD0rD95nlXe9mARu8VRwdfSD7N0EaEUJSo_duO4/edit)
-- [Open the Fall 2026 course schedule](https://docs.google.com/spreadsheets/d/1JMbgBQlmLbLhXaRGhf5DeWaE31Wu0ROAByPyzyIxn9E/edit?usp=sharing)
-- Start with GitHub issue #1.
+## Start here
 
-## Apprentice loop
+1. Follow [Setup and the two-attempt walkthrough](docs/student-guide.md). It explains GitHub terms, copying the project, running checks, saving each attempt, and submitting your work.
+2. Read [Your assignment and definition of success](docs/assignment.md). This is the complete task, including requirements formerly available only in [issue #1](https://github.com/onexi/agentic-lesson-02-context-engineering/issues/1). GitHub does not copy issues when you create a repository from a template.
+3. Use [the comparison worksheet](docs/comparison-template.md) to record evidence.
 
-1. **Observe** — inspect the repository and issue before editing.
-2. **Imitate** — reproduce the instructor's smallest verified move.
-3. **Extend** — implement one bounded component at a time with Codex.
-4. **Reflect** — explain what evidence changed your plan.
+## What counts as success?
 
-## Run the baseline
+- **The feature works:** both commands below finish with `OK`, with no failures, errors, or skipped tests. The acceptance examples in [the assignment](docs/assignment.md) all hold.
+- **You explain the project:** create `docs/codex-context.md` using [the briefing outline](docs/context-template.md), with verified file references and observed commands/results.
+- **You compare two attempts fairly:** start each from the same saved version; record both exact prompts, plans, changes, and test results. Discuss at least three observations. An honest tie or a worse second result is acceptable; do not invent improvements.
+- **You understand the result:** both partners can explain each changed file and trace an example through the calculation.
+- **You submit reviewable evidence:** a draft pull request in your own repository links both attempts and includes the completed checklist and comparison. Submit its URL and final commit ID.
+
+The minimally prompted attempt may fail. That is useful evidence and does not by itself make the lesson unsuccessful. The final submitted implementation must satisfy the requirements.
+
+## The two checks
+
+Run these in the project's terminal (see setup for choosing your Python command):
 
 ```bash
-python -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s acceptance_tests -v
 ```
 
-The baseline tests pass. A skipped challenge test documents part of issue #1. Enable it only when you are ready to observe the expected failure.
+The first command checks existing behavior: **3 tests pass in the starter**. The second checks the assigned feature: **12 tests initially error because the feature is unfinished**. A completed feature passes all 15 tests. Do not delete, skip, or weaken checks to obtain a pass.
 
-## Definition of done
+The automatic GitHub workflow checks existing behavior only so the unfinished template stays usable. **A green GitHub check alone does not mean the assignment is complete.** Include output from both commands in your submission.
 
-- Issue acceptance criteria are satisfied.
-- Challenge test is enabled and the full suite passes.
-- The diff contains no unrelated changes.
-- The pull request records the commands and observed results.
-- Every team member can explain the final control flow.
+## Files you will encounter
+
+| File or folder | Purpose |
+| --- | --- |
+| `starter/order_service.py` | The small calculation you will improve |
+| `docs/domain-rules.md` | Exact pricing policy |
+| `tests/` | Checks that existing behavior still works |
+| `acceptance_tests/` | Checks defining completion of the feature |
+| `AGENTS.md` | Standing instructions for the AI assistant |
+| `docs/codex-context.md` | The project briefing you create for attempt B |
+| `docs/comparison.md` | The completed comparison you submit |
+
+There are no third-party dependencies, installation commands, web server, or configured lint tool. Python 3.10 or later and Git are sufficient for local work. Tests are the way to run and verify this project.
+
+## Instructor note
+
+This repository uses one 90-minute sequence, two implemented attempts, and one briefing filename: `docs/codex-context.md`. Use these repository instructions if the [original lesson brief](https://docs.google.com/document/d/1U0RULD0rD95nlXe9mARu8VRwdfSD7N0EaEUJSo_duO4/edit) differs. The original brief's `CONTEXT.md` refers to this same deliverable; students should not create two briefings. Setup should be completed before the timed workshop. Lesson 02 is the course identifier even when this is a student's first coding exercise.
+
+[Fall 2026 course schedule](https://docs.google.com/spreadsheets/d/1JMbgBQlmLbLhXaRGhf5DeWaE31Wu0ROAByPyzyIxn9E/edit?usp=sharing)
