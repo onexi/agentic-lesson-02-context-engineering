@@ -1,6 +1,6 @@
 # AGENTS.md
 
-- Read README.md and docs/assignment.md before changing code. The assignment is the in-repository version of issue #1 and is available in template copies.
+- Read README.md and docs/assignment.md before changing code. docs/assignment.md is the authoritative student assignment and is included in every copy of this repository.
 - Verify existing behavior with `python3 -m tests.test_order_service` and the feature with `python3 -m acceptance_tests.test_discount_acceptance`. Use `python` or `py` if that is the available Python 3.10+ interpreter.
 - Make one bounded change at a time and inspect the diff after each change.
 - Do not add dependencies, secrets, generated artifacts, or unrelated refactors.
