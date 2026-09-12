@@ -12,6 +12,11 @@ def expect_value_error(function, *args):
 
 def run_tests(tests):
     """Run every listed test, print its result, and exit with an error if any fail."""
+    if not __debug__:
+        raise SystemExit("Run tests without -O or -OO; assertions must be enabled")
+    if not tests:
+        raise SystemExit("No tests supplied")
+
     failures = 0
     for test in tests:
         try:
